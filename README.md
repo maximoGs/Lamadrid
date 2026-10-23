@@ -1,8 +1,16 @@
 # Los Bocheros Restó · Lamadrid Estate Wines
 
-Menú digital e interactivo de **7 Pasos** para el restaurante **Los Bocheros Restó** de la bodega **Lamadrid Estate Wines**, ubicada en **Las Compuertas, Luján de Cuyo, Mendoza, Argentina**.
+Menú digital e interactivo (Primavera a la Carta & Otoño de 7 Pasos), Cava de Sommelier y Asistente de Reservas para el restaurante **Los Bocheros Restó** de la bodega **Lamadrid Estate Wines**, ubicada en **Las Compuertas, Luján de Cuyo, Mendoza, Argentina**.
 
 Diseñado bajo una estética **fina, argentina, suave y delicadamente rústica**, enalteciendo el terruño mendocino, las viñas centenarias y la gastronomía de raíces.
+
+---
+
+## 📞 Reservas & Contacto Oficial
+
+- **WhatsApp / Teléfono Oficial de Reservas**: **+54 9 2615 54-8460** (`https://wa.me/5492615548460`)
+- **Correo de Hospitalidad**: `turismo@lamadridwines.com`
+- **Dirección**: Roque Sáenz Peña 8450, Las Compuertas, Luján de Cuyo, Mendoza, Argentina.
 
 ---
 
@@ -15,33 +23,37 @@ Diseñado bajo una estética **fina, argentina, suave y delicadamente rústica**
     - **Entradas**: Espárragos a la plancha, Provoleta asada, Solomillo curado al Malbec, Queso de cabra con remolacha, Especial Dúo Empanadas Los Bocheros.
     - **Principales**: Costilla confitada, Pasta artesanal de hongos, Trucha a la plancha con curry de alcauciles, Ojo de bife con vegetales salteados.
     - **Postres**: Pera pochada, Tarta flan caramelizada con helado, Selección artesanal de quesos y dulces, Clásico panqueque tibio con dulce de leche.
-    - Precios de carta en moneda local y maridajes (Clásico y Upgrade).
-    - Enlace a reseñas *(Leave your review here!)*.
+    - Descripciones gastronómicas detalladas, precios en moneda local, etiquetas dietarias (`🌱 Vegetariano`, `🔥 A las Brasas`, `👑 Especialidad`) y maridajes (Clásico y Upgrade).
   - 🍂 **Menú Otoño (Degustación 7 Pasos)**:
     - Recorrido completo de 7 pasos maridados con vinos Reserva, Gran Reserva e íconos como *Matilde Malbec*.
-- **Doble Modalidad de Visualización**:
-  - **Carta Completa**: Formato tradicional de alta enogastronomía.
-  - **Paso a Paso Interactivo**: Despliegue guiado curso por curso con selector de pasos y notas de cata.
-- **Filtro de Maridajes**: Alterna entre *Todos los Maridajes*, *Clásico (Reserva)* y *Upgrade (Gran Reserva & Íconos)*.
-- **Multilingüe (4 Idiomas)**:
-  - 🇦🇷 **Español**
-  - 🇬🇧 **English**
-  - 🇧🇷 **Português**
-  - 🇨🇭 **Suizo (Deutsch Schweizer)**
-- **Optimizado para Impresión (`@media print`)**: Listo para imprimir en formato físico de restaurante sin elementos de navegación.
-- **Reserva Directa por WhatsApp**: Enlace preconfigurado para contacto inmediato con el equipo de turismo.
+- **Cava Interactiva del Sommelier**:
+  - Al tocar cualquiera de los 17 vinos del menú, se despliega su **Ficha Técnica & Notas de Cata** (origen del viñedo, crianza en roble francés, temperatura ideal de servicio y notas del Sommelier en los 4 idiomas).
+- **Preselección de Carta ("Mi Selección") & Asistente de Reservas por WhatsApp (`+54 9 2615 54-8460`)**:
+  - Permite elegir platos de la carta de Primavera, estimar el total y adjuntarlos automáticamente en la solicitud de reserva.
+  - Modal de reserva interactivo para elegir fecha, horario, cantidad de comensales, propuesta gastronómica, maridaje y restricciones alimentarias, generando el mensaje directo hacia **+54 9 2615 54-8460**.
+- **Doble Modalidad de Visualización & Filtros**:
+  - **Carta Completa** o **Paso a Paso Interactivo** (con soporte de teclado `←`/`→`, barra de progreso y gestos táctiles *swipe*).
+  - **Filtro de Maridajes**: Alterna entre *Todos los Maridajes*, *Clásico* y *Upgrade*.
+  - **Filtro Gastronómico**: Filtra rápidamente platos *Vegetarianos*, *Fuegos & Carnes* o *Especialidades*.
+- **Multilingüe (4 Idiomas con persistencia)**:
+  - 🇦🇷 **Español** (`es`)
+  - 🇬🇧 **English** (`en`)
+  - 🇧🇷 **Português** (`pt`)
+  - 🇨🇭 **Suizo (Deutsch Schweizer)** (`de-ch`)
+- **Optimizado para Impresión (`@media print`)**: Listo para imprimir en formato físico de restaurante sin controles ni botones interactivos.
 
 ---
 
 ## 📁 Estructura del Repositorio
 
 ```text
-├── index.html        # Estructura semántica, accesibilidad y maquetación
-├── styles.css        # Sistema de diseño, tipografía, paleta y responsive
-├── app.js            # Lógica interactiva, traducciones ES/EN y filtros
+├── index.html        # Estructura semántica, SEO/Schema.org, modales y maquetación
+├── styles.css        # Sistema de diseño, tipografía, paleta, modales y responsive
+├── app.js            # Traducciones ES/EN/PT/DE-CH, Cava Sommelier, filtros y reservas WhatsApp
 └── assets/
-    ├── lamadrid-logo.png       # Logo oficial de Lamadrid Estate Wines
-    └── los-bocheros-hero.jpg   # Fotografía ambiental de terraza y viñedos en otoño
+    ├── lamadrid-logo.png        # Logo oficial de Lamadrid Estate Wines
+    ├── los-bocheros-spring.jpg  # Fotografía ambiental de terraza en primavera
+    └── los-bocheros-hero.jpg    # Fotografía ambiental de terraza y viñedos en otoño
 ```
 
 ---

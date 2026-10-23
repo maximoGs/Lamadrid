@@ -4,8 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Los Bocheros Restó | Menú Primavera & Otoño · Lamadrid Estate Wines</title>
-  <meta name="description" content="Menú Primavera a la Carta y Menú Degustación Otoño en Los Bocheros Restó, Bodega Lamadrid Estate Wines. Cocina argentina de raíz y maridajes de excepción en Las Compuertas, Luján de Cuyo, Mendoza.">
-  
+  <meta name="description" content="Menú Primavera a la Carta y Menú Degustación Otoño de 7 Pasos en Los Bocheros Restó, Bodega Lamadrid Estate Wines. Cocina argentina de raíz y maridajes de excepción en Las Compuertas, Luján de Cuyo, Mendoza. Reservas: +54 9 2615 54-8460.">
+  <meta name="theme-color" content="#153b66">
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Los Bocheros Restó | Menú Primavera & Otoño · Lamadrid Estate Wines">
+  <meta property="og:description" content="Cocina argentina de raíz y maridajes de excepción en Las Compuertas, Luján de Cuyo, Mendoza. Reservá tu mesa al +54 9 2615 54-8460.">
+  <meta property="og:image" content="assets/los-bocheros-spring.jpg">
+  <meta property="og:locale" content="es_AR">
+
+  <!-- Schema.org Restaurant Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Los Bocheros Restó · Lamadrid Estate Wines",
+    "image": "assets/los-bocheros-spring.jpg",
+    "servesCuisine": ["Cocina Argentina Contemporánea", "Cocina de Bodega", "Enogastronomía"],
+    "priceRange": "$$$",
+    "telephone": "+54 9 2615 54-8460",
+    "email": "turismo@lamadridwines.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Roque Sáenz Peña 8450, Las Compuertas",
+      "addressLocality": "Luján de Cuyo",
+      "addressRegion": "Mendoza",
+      "postalCode": "M5509",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -33.0412,
+      "longitude": -68.9578
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "12:30",
+        "closes": "16:30"
+      }
+    ],
+    "acceptsReservations": "True"
+  }
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/lamadrid-logo.png">
 
@@ -87,6 +131,17 @@
           </svg>
           <span class="btn-text" data-i18n="print_btn">Imprimir</span>
         </button>
+
+        <!-- Direct Reserve Button in Top Nav -->
+        <button id="nav-reserve-btn" class="nav-btn nav-reserve-cta" title="Reservar mesa en Los Bocheros (+54 9 2615 54-8460)">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <span data-i18n="nav_reserve_btn">Reservar</span>
+        </button>
       </div>
     </div>
   </header>
@@ -140,8 +195,15 @@
         </div>
       </div>
 
-      <!-- Leave your review pill -->
-      <div class="review-invite-banner">
+      <!-- Hero Quick Actions: Reserve & Review -->
+      <div class="hero-quick-links">
+        <button type="button" class="hero-reserve-chip" id="hero-reserve-btn">
+          <svg class="wa-mini-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.3C4.19 14.91 3.73 13.3 3.73 11.91C3.73 7.37 7.46 3.67 12.05 3.67"/>
+          </svg>
+          <span data-i18n="hero_book_cta">Reservar Mesa · +54 9 2615 54-8460</span>
+        </button>
+
         <a href="https://www.tripadvisor.com.ar/Search?q=Lamadrid+Estate+Wines" target="_blank" rel="noopener noreferrer" class="review-link-chip">
           <span class="review-star">★</span>
           <span data-i18n="leave_review">¡Deje su reseña aquí! / Leave your review here!</span>
@@ -171,6 +233,10 @@
         <span class="vegetarian-note" data-i18n="veg_notice">
           (Disponemos de adaptaciones vegetarianas, veganas y celíacas con previo aviso)
         </span>
+        <div class="sommelier-hint-pill">
+          <span class="wine-glass-icon">🍷</span>
+          <span data-i18n="sommelier_hint">Toque cualquier vino de la carta para explorar su ficha técnica y notas de cata del Sommelier.</span>
+        </div>
       </div>
     </div>
 
@@ -178,6 +244,31 @@
          SECTION 1: MENÚ PRIMAVERA (A LA CARTA)
          =================================================================== -->
     <section class="menu-card-container active-menu-section" id="menu-spring-section">
+      <!-- Quick Category Navigation & Dietary Filter Bar -->
+      <div class="spring-toolbar">
+        <div class="category-jump-pills" role="navigation" aria-label="Secciones de la carta">
+          <a href="#cat-entradas-anchor" class="cat-jump-pill">
+            <span data-i18n="cat_entradas">ENTRADAS</span>
+            <span class="pill-count">5</span>
+          </a>
+          <a href="#cat-principales-anchor" class="cat-jump-pill">
+            <span data-i18n="cat_principales">PRINCIPALES</span>
+            <span class="pill-count">4</span>
+          </a>
+          <a href="#cat-postres-anchor" class="cat-jump-pill">
+            <span data-i18n="cat_postres">POSTRES</span>
+            <span class="pill-count">4</span>
+          </a>
+        </div>
+
+        <div class="dietary-filter-pills" role="group" aria-label="Filtro gastronómico">
+          <button type="button" class="diet-pill active" data-diet="all" data-i18n="diet_all">Todos los Platos</button>
+          <button type="button" class="diet-pill" data-diet="veg">🌱 <span data-i18n="diet_veg">Vegetariano</span></button>
+          <button type="button" class="diet-pill" data-diet="fire">🔥 <span data-i18n="diet_fire">Fuegos & Carnes</span></button>
+          <button type="button" class="diet-pill" data-diet="chef">👑 <span data-i18n="diet_chef">Especialidades</span></button>
+        </div>
+      </div>
+
       <div class="menu-parchment-sheet">
         <!-- Vintage Frame Corners -->
         <div class="corner-flourish corner-tl"></div>
@@ -205,7 +296,7 @@
         </header>
 
         <!-- SECCIÓN 1: ENTRADAS -->
-        <div class="menu-category-group">
+        <div class="menu-category-group" id="cat-entradas-anchor">
           <div class="category-header">
             <h3 class="category-title" data-i18n="cat_entradas">ENTRADAS</h3>
             <span class="category-line"></span>
@@ -213,20 +304,32 @@
 
           <div class="courses-list">
             <!-- Entrada 1 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_e1" data-price="18000" data-tags="veg">
               <div class="course-body">
                 <div class="dish-title-row">
-                  <h4 class="dish-title" data-i18n="sp_e1_name">ESPÁRRAGOS A LA PLANCHA, QUESO PARMESANO, ALMENDRAS TOSTADAS, GEL DE LIMÓN Y YEMA CURADA</h4>
-                  <span class="dish-price">$18.000</span>
+                  <div class="title-with-badge">
+                    <h4 class="dish-title" data-i18n="sp_e1_name">ESPÁRRAGOS A LA PLANCHA, QUESO PARMESANO, ALMENDRAS TOSTADAS, GEL DE LIMÓN Y YEMA CURADA</h4>
+                    <span class="diet-badge veg-badge" data-i18n="tag_veg">🌱 Vegetariano</span>
+                  </div>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$18.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_e1" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_e1_desc">
+                  Espárragos verdes tiernos dorados a la plancha, escamas de parmesano estacionado, crocante de almendras tostadas, punto cítrico de gel de limón y yema curada cremosa.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">Lamadrid Blanc de Blancs</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Blanc de Blancs">Lamadrid Blanc de Blancs <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Lamadrid Gran Reserva Chardonnay</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Gran Reserva Chardonnay">Lamadrid Gran Reserva Chardonnay <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -235,20 +338,33 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Entrada 2 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_e2" data-price="25000" data-tags="veg,fire">
               <div class="course-body">
                 <div class="dish-title-row">
-                  <h4 class="dish-title" data-i18n="sp_e2_name">PROVOLETA ASADA CON CHIMICHURRI ROJO CASERO</h4>
-                  <span class="dish-price">$25.000</span>
+                  <div class="title-with-badge">
+                    <h4 class="dish-title" data-i18n="sp_e2_name">PROVOLETA ASADA CON CHIMICHURRI ROJO CASERO</h4>
+                    <span class="diet-badge veg-badge" data-i18n="tag_veg">🌱 Vegetariano</span>
+                    <span class="diet-badge fire-badge" data-i18n="tag_fire">🔥 A las Brasas</span>
+                  </div>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$25.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_e2" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_e2_desc">
+                  Clásico queso provolone hilado argentino dorado al fuego con costra crocante e interior fundido, coronado con chimichurri rojo artesanal de pimientos y especias.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">Lamadrid Terroir Selection Malbec D.O.C</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Terroir Selection Malbec D.O.C">Lamadrid Terroir Selection Malbec D.O.C <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Lamadrid Reserva Cabernet Sauvignon</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Reserva Cabernet Sauvignon">Lamadrid Reserva Cabernet Sauvignon <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -257,20 +373,31 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Entrada 3 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_e3" data-price="21000" data-tags="chef">
               <div class="course-body">
                 <div class="dish-title-row">
-                  <h4 class="dish-title" data-i18n="sp_e3_name">SOLOMILLO DE CERDO CURADO AL MALBEC CON MANZANA VERDE FRESCA Y HOJAS VERDES</h4>
-                  <span class="dish-price">$21.000</span>
+                  <div class="title-with-badge">
+                    <h4 class="dish-title" data-i18n="sp_e3_name">SOLOMILLO DE CERDO CURADO AL MALBEC CON MANZANA VERDE FRESCA Y HOJAS VERDES</h4>
+                  </div>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$21.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_e3" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_e3_desc">
+                  Finas láminas de solomillo de cerdo curado en casa con Malbec de la finca y hierbas, acompañado de manzana verde ácida fileteada y brotes tiernos de huerta.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">Lamadrid Terroir Selection Bonarda</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Terroir Selection Bonarda">Lamadrid Terroir Selection Bonarda <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Lamadrid Reserva Malbec</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Reserva Malbec">Lamadrid Reserva Malbec <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -279,20 +406,32 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Entrada 4 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_e4" data-price="18000" data-tags="veg">
               <div class="course-body">
                 <div class="dish-title-row">
-                  <h4 class="dish-title" data-i18n="sp_e4_name">QUESO DE CABRA, REMOLACHA ASADA, YOGUR ARTESANAL, FRAMBUESAS Y CROCANTES</h4>
-                  <span class="dish-price">$18.000</span>
+                  <div class="title-with-badge">
+                    <h4 class="dish-title" data-i18n="sp_e4_name">QUESO DE CABRA, REMOLACHA ASADA, YOGUR ARTESANAL, FRAMBUESAS Y CROCANTES</h4>
+                    <span class="diet-badge veg-badge" data-i18n="tag_veg">🌱 Vegetariano</span>
+                  </div>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$18.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_e4" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_e4_desc">
+                  Contraste armónico de queso de cabra regional, remolachas asadas lentamente, suavidad de yogur artesanal, frescura de frambuesas y texturas crocantes.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">Lamadrid Terroir Selection Cabernet Sauvignon</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Terroir Selection Cabernet Sauvignon">Lamadrid Terroir Selection Cabernet Sauvignon <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Lamadrid Reserva Cabernet Sauvignon</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Reserva Cabernet Sauvignon">Lamadrid Reserva Cabernet Sauvignon <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -301,23 +440,33 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Entrada 5 -->
-            <article class="course-item chef-specialty-item">
+            <article class="course-item chef-specialty-item" data-dish-id="sp_e5" data-price="16000" data-tags="fire,chef">
               <div class="course-body">
                 <div class="dish-title-row">
                   <div class="title-with-badge">
                     <h4 class="dish-title" data-i18n="sp_e5_name">ESPECIAL DÚO EMPANADAS LOS BOCHEROS</h4>
                     <span class="chef-badge" data-i18n="specialty_tag">Especialidad</span>
+                    <span class="diet-badge fire-badge" data-i18n="tag_clay_oven">🔥 Horno de Barro</span>
                   </div>
-                  <span class="dish-price">$16.000</span>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$16.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_e5" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_e5_desc">
+                  Dúo de nuestras emblemáticas empanadas mendocinas de carne cortada a cuchillo, masa criolla hojaldrada y cocción tradicional en horno de barro a leña de sarmiento.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">Lamadrid Reserva Malbec</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Reserva Malbec">Lamadrid Reserva Malbec <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Lamadrid Gran Reserva Malbec</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Gran Reserva Malbec">Lamadrid Gran Reserva Malbec <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -326,7 +475,7 @@
         </div>
 
         <!-- SECCIÓN 2: PRINCIPALES -->
-        <div class="menu-category-group" style="margin-top: 2.5rem;">
+        <div class="menu-category-group" id="cat-principales-anchor" style="margin-top: 2.5rem;">
           <div class="category-header">
             <h3 class="category-title" data-i18n="cat_principales">PRINCIPALES</h3>
             <span class="category-line"></span>
@@ -334,20 +483,32 @@
 
           <div class="courses-list">
             <!-- Principal 1 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_p1" data-price="34000" data-tags="fire,chef">
               <div class="course-body">
                 <div class="dish-title-row">
-                  <h4 class="dish-title" data-i18n="sp_p1_name">COSTILLA CONFITADA, CREMOSO DE PAPA, QUESO MORBIER, PANCETA AHUMADA Y FONDO DE COCCIÓN REDUCIDO</h4>
-                  <span class="dish-price">$34.000</span>
+                  <div class="title-with-badge">
+                    <h4 class="dish-title" data-i18n="sp_p1_name">COSTILLA CONFITADA, CREMOSO DE PAPA, QUESO MORBIER, PANCETA AHUMADA Y FONDO DE COCCIÓN REDUCIDO</h4>
+                    <span class="diet-badge fire-badge" data-i18n="tag_slow_fire">🔥 Cocción Lenta</span>
+                  </div>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$34.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_p1" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_p1_desc">
+                  Costilla vacuna tiernizada a baja temperatura durante horas, servida sobre mousseline sedoso de papa con queso Morbier fundido, lardons de panceta ahumada y su propio demi-glace.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">Lamadrid Gran Reserva Malbec</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Gran Reserva Malbec">Lamadrid Gran Reserva Malbec <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Guillermo Cabernet Sauvignon</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Guillermo Cabernet Sauvignon">Guillermo Cabernet Sauvignon <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -356,20 +517,32 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Principal 2 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_p2" data-price="29000" data-tags="veg,chef">
               <div class="course-body">
                 <div class="dish-title-row">
-                  <h4 class="dish-title" data-i18n="sp_p2_name">PASTA ARTESANAL DE HONGOS, ARVEJAS TIERNAS, CROCANTE ESPECIADO Y BASE DE MUHAMMARA DE PIMIENTOS Y NUECES</h4>
-                  <span class="dish-price">$29.000</span>
+                  <div class="title-with-badge">
+                    <h4 class="dish-title" data-i18n="sp_p2_name">PASTA ARTESANAL DE HONGOS, ARVEJAS TIERNAS, CROCANTE ESPECIADO Y BASE DE MUHAMMARA DE PIMIENTOS Y NUECES</h4>
+                    <span class="diet-badge veg-badge" data-i18n="tag_veg">🌱 Vegetariano</span>
+                  </div>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$29.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_p2" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_p2_desc">
+                  Pasta fresca amasada en casa rellena de hongos silvestres, arvejas frescas de estación, crumble especiado y espejo de muhammara de pimientos asados y nueces de Tupungato.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">Lamadrid Gran Reserva Cabernet Franc</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Gran Reserva Cabernet Franc">Lamadrid Gran Reserva Cabernet Franc <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing iconic-wine">
                     <span class="pairing-badge upgrade-badge icon-flag" data-i18n="badge_iconic">Ícono Upgrade:</span>
-                    <span class="wine-name">Matilde Malbec</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Matilde Malbec">Matilde Malbec <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -378,20 +551,31 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Principal 3 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_p3" data-price="36000" data-tags="chef">
               <div class="course-body">
                 <div class="dish-title-row">
-                  <h4 class="dish-title" data-i18n="sp_p3_name">TRUCHA A LA PLANCHA, CURRY CREMOSO DE ALCAUCILES CON AJÍ AMARILLO Y CUSCÚS CROCANTE</h4>
-                  <span class="dish-price">$36.000</span>
+                  <div class="title-with-badge">
+                    <h4 class="dish-title" data-i18n="sp_p3_name">TRUCHA A LA PLANCHA, CURRY CREMOSO DE ALCAUCILES CON AJÍ AMARILLO Y CUSCÚS CROCANTE</h4>
+                  </div>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$36.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_p3" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_p3_desc">
+                  Trucha andina grillada con piel crocante, acompañada de suave emulsión de curry de alcauciles mendocinos al ají amarillo y textura de cuscús tostado.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">Lamadrid Gran Reserva Chardonnay</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Gran Reserva Chardonnay">Lamadrid Gran Reserva Chardonnay <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Begani Private Selection</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Begani Private Selection">Begani Private Selection <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -400,20 +584,33 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Principal 4 -->
-            <article class="course-item main-course-item">
+            <article class="course-item main-course-item" data-dish-id="sp_p4" data-price="36000" data-tags="fire,chef">
               <div class="course-body">
                 <div class="dish-title-row">
-                  <h4 class="dish-title" data-i18n="sp_p4_name">OJO DE BIFE Y VEGETALES FRESCOS DE TEMPORADA SALTEADOS</h4>
-                  <span class="dish-price">$36.000</span>
+                  <div class="title-with-badge">
+                    <h4 class="dish-title" data-i18n="sp_p4_name">OJO DE BIFE Y VEGETALES FRESCOS DE TEMPORADA SALTEADOS</h4>
+                    <span class="diet-badge fire-badge" data-i18n="tag_fire">🔥 A las Brasas</span>
+                    <span class="chef-badge" data-i18n="main_tag">Principal</span>
+                  </div>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$36.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_p4" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_p4_desc">
+                  Corte emblema argentino asado sobre brasas de quebracho y sarmientos de viña en su punto exacto, escoltado por vegetales orgánicos de estación salteados con AOVE Lamadrid.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">Lamadrid Gran Reserva Malbec</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Gran Reserva Malbec">Lamadrid Gran Reserva Malbec <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing iconic-wine">
                     <span class="pairing-badge upgrade-badge icon-flag" data-i18n="badge_iconic">Ícono Upgrade:</span>
-                    <span class="wine-name">Matilde Malbec</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Matilde Malbec">Matilde Malbec <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -422,7 +619,7 @@
         </div>
 
         <!-- SECCIÓN 3: POSTRES -->
-        <div class="menu-category-group" style="margin-top: 2.5rem;">
+        <div class="menu-category-group" id="cat-postres-anchor" style="margin-top: 2.5rem;">
           <div class="category-header">
             <h3 class="category-title" data-i18n="cat_postres">POSTRES</h3>
             <span class="category-line"></span>
@@ -430,20 +627,29 @@
 
           <div class="courses-list">
             <!-- Postre 1 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_d1" data-price="16000" data-tags="veg">
               <div class="course-body">
                 <div class="dish-title-row">
                   <h4 class="dish-title" data-i18n="sp_d1_name">PERA POCHADA, MOUSSE DE MASCARPONE, TOFFEE FLUIDO Y CRUMBLE DE QUESO PEPATO Y ALMENDRAS</h4>
-                  <span class="dish-price">$16.000</span>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$16.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_d1" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_d1_desc">
+                  Pera mendocina pochada en almíbar especiado, aireada mousse de mascarpone, salsa tibia de toffee y crumble salado-dulce de queso Pepato y almendras.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">ZunZun Pet Nat</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="ZunZun Pet Nat">ZunZun Pet Nat <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Margarita Espumoso</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Margarita Espumoso">Margarita Espumoso <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -452,20 +658,29 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Postre 2 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_d2" data-price="17000" data-tags="veg">
               <div class="course-body">
                 <div class="dish-title-row">
                   <h4 class="dish-title" data-i18n="sp_d2_name">TARTA FLAN CARAMELIZADA CON HELADO</h4>
-                  <span class="dish-price">$17.000</span>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$17.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_d2" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_d2_desc">
+                  Textura sedosa de flan casero horneado con caramelo dorado profundo, acompañado de una bocha de helado artesanal de crema americana.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">ZunZun Pet Nat</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="ZunZun Pet Nat">ZunZun Pet Nat <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Margarita Espumoso</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Margarita Espumoso">Margarita Espumoso <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -474,20 +689,29 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Postre 3 -->
-            <article class="course-item">
+            <article class="course-item" data-dish-id="sp_d3" data-price="16000" data-tags="veg">
               <div class="course-body">
                 <div class="dish-title-row">
                   <h4 class="dish-title" data-i18n="sp_d3_name">SELECCIÓN ARTESANAL DE QUESOS Y DULCES DE ESTACIÓN</h4>
-                  <span class="dish-price">$16.000</span>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$16.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_d3" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_d3_desc">
+                  Tradicional vigilante mendocino con quesos regionales de tambo seleccionado y dulces artesanales en almíbar de frutos de nuestra tierra.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">ZunZun Pet Nat</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="ZunZun Pet Nat">ZunZun Pet Nat <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Margarita Espumoso</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Margarita Espumoso">Margarita Espumoso <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -496,20 +720,32 @@
             <div class="course-divider"><span class="diamond">♦</span></div>
 
             <!-- Postre 4 -->
-            <article class="course-item dessert-item">
+            <article class="course-item dessert-item" data-dish-id="sp_d4" data-price="18000" data-tags="veg,chef">
               <div class="course-body">
                 <div class="dish-title-row">
-                  <h4 class="dish-title" data-i18n="sp_d4_name">CLÁSICO PANQUEQUE CASERO TIBIO CON DULCE DE LECHE ARTESANAL</h4>
-                  <span class="dish-price">$18.000</span>
+                  <div class="title-with-badge">
+                    <h4 class="dish-title" data-i18n="sp_d4_name">CLÁSICO PANQUEQUE CASERO TIBIO CON DULCE DE LECHE ARTESANAL</h4>
+                    <span class="chef-badge" data-i18n="specialty_tag">Especialidad</span>
+                  </div>
+                  <div class="dish-price-actions">
+                    <span class="dish-price">$18.000</span>
+                    <button type="button" class="add-selection-btn" data-dish-id="sp_d4" aria-label="Sumar plato a mi selección">
+                      <span class="add-icon">+</span>
+                      <span class="add-label" data-i18n="btn_add_dish">Elegir</span>
+                    </button>
+                  </div>
                 </div>
+                <p class="dish-description" data-i18n="sp_d4_desc">
+                  Finas crepes doradas a la manteca y caramelizadas al momento, generosamente rellenas de dulce de leche repostero argentino tibio.
+                </p>
                 <div class="dish-pairings">
                   <div class="pairing-row standard-pairing">
                     <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                    <span class="wine-name">ZunZun Pet Nat</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="ZunZun Pet Nat">ZunZun Pet Nat <span class="wine-info-icon">🍷</span></button>
                   </div>
                   <div class="pairing-row upgrade-pairing">
                     <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                    <span class="wine-name">Margarita Espumoso</span>
+                    <button type="button" class="wine-name wine-trigger" data-wine="Margarita Espumoso">Margarita Espumoso <span class="wine-info-icon">🍷</span></button>
                   </div>
                 </div>
               </div>
@@ -529,15 +765,15 @@
           <div class="card-footer-details">
             <div class="footer-col">
               <span class="col-title" data-i18n="col_reservations">RESERVAS & VISITAS</span>
-              <span class="col-content">+54 9 261 555-7890</span>
-              <span class="col-content">turismo@lamadridwines.com</span>
+              <a href="https://wa.me/5492615548460?text=Hola,%20quisiera%20hacer%20una%20reserva%20en%20Los%20Bocheros%20Rest%C3%B3" target="_blank" rel="noopener noreferrer" class="col-content col-link">+54 9 2615 54-8460</a>
+              <a href="mailto:turismo@lamadridwines.com" class="col-content col-link">turismo@lamadridwines.com</a>
             </div>
             <div class="footer-col brand-col">
               <img src="assets/lamadrid-logo.png" alt="Lamadrid Logo" class="footer-logo">
             </div>
             <div class="footer-col">
               <span class="col-title" data-i18n="col_location">UBICACIÓN</span>
-              <span class="col-content">Roque Sáenz Peña 8450</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Lamadrid+Estate+Wines+Roque+Saenz+Pena+8450+Las+Compuertas+Mendoza" target="_blank" rel="noopener noreferrer" class="col-content col-link">Roque Sáenz Peña 8450</a>
               <span class="col-content">Las Compuertas, Luján de Cuyo, Mendoza</span>
             </div>
           </div>
@@ -571,6 +807,9 @@
 
       <!-- Interactive Step-by-Step Navigator -->
       <div class="step-navigator-container" id="step-navigator" style="display: none;">
+        <div class="step-progress-bar">
+          <div class="step-progress-fill" id="step-progress-fill" style="width: 14.28%;"></div>
+        </div>
         <div class="step-nav-header">
           <span class="step-counter" id="active-step-indicator">Paso 1 de 7</span>
           <div class="step-dots" id="step-dots-container"></div>
@@ -582,6 +821,7 @@
           <button class="step-nav-btn prev" id="prev-step-btn" disabled>
             ← <span data-i18n="btn_prev_step">Paso Anterior</span>
           </button>
+          <span class="step-keyboard-hint" data-i18n="step_swipe_hint">Deslice o use ← →</span>
           <button class="step-nav-btn next" id="next-step-btn">
             <span data-i18n="btn_next_step">Siguiente Paso</span> →
           </button>
@@ -630,12 +870,12 @@
               <div class="dish-pairings">
                 <div class="pairing-row standard-pairing">
                   <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                  <span class="wine-name">Lamadrid Reserva Bonarda</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Reserva Bonarda">Lamadrid Reserva Bonarda <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_1_std_notes">(Las Compuertas · Notas frutadas y taninos aterciopelados)</span>
                 </div>
                 <div class="pairing-row upgrade-pairing">
                   <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                  <span class="wine-name">Lamadrid Gran Reserva Chardonnay</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Gran Reserva Chardonnay">Lamadrid Gran Reserva Chardonnay <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_1_upg_notes">(Crianza en roble francés · Textura envolvente y frescura mineral)</span>
                 </div>
               </div>
@@ -658,12 +898,12 @@
               <div class="dish-pairings">
                 <div class="pairing-row standard-pairing">
                   <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                  <span class="wine-name">Peñón de Agrelo Cabernet Sauvignon</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Peñón de Agrelo Cabernet Sauvignon">Peñón de Agrelo Cabernet Sauvignon <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_2_std_notes">(Agrelo · Pimienta negra, pimiento dulce y elegante estructura)</span>
                 </div>
                 <div class="pairing-row upgrade-pairing">
                   <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                  <span class="wine-name">Lamadrid Reserva Cabernet Sauvignon</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Reserva Cabernet Sauvignon">Lamadrid Reserva Cabernet Sauvignon <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_2_upg_notes">(Las Compuertas · 12 meses en barrica · Complejidad y final sedoso)</span>
                 </div>
               </div>
@@ -686,12 +926,12 @@
               <div class="dish-pairings">
                 <div class="pairing-row standard-pairing">
                   <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                  <span class="wine-name">Los Bocheros White Blend</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Los Bocheros White Blend">Los Bocheros White Blend <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_3_std_notes">(Corte de blancas de la casa · Acidez vibrante que limpia el paladar)</span>
                 </div>
                 <div class="pairing-row upgrade-pairing">
                   <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                  <span class="wine-name">Peñón de Agrelo Corte de Finca</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Peñón de Agrelo Corte de Finca">Peñón de Agrelo Corte de Finca <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_3_upg_notes">(Blend de autor · Balance aromático y redondez en boca)</span>
                 </div>
               </div>
@@ -718,12 +958,12 @@
               <div class="dish-pairings">
                 <div class="pairing-row standard-pairing">
                   <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                  <span class="wine-name">Lamadrid Reserva Malbec</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Reserva Malbec">Lamadrid Reserva Malbec <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_4_std_notes">(Fruta roja madura, ciruela, violetas y un toque de vainilla)</span>
                 </div>
                 <div class="pairing-row upgrade-pairing">
                   <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                  <span class="wine-name">Lamadrid Gran Reserva Malbec</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Gran Reserva Malbec">Lamadrid Gran Reserva Malbec <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_4_upg_notes">(Selección de parcelas viejas · Gran concentración y elegancia pura)</span>
                 </div>
               </div>
@@ -747,12 +987,12 @@
               <div class="dish-pairings">
                 <div class="pairing-row standard-pairing">
                   <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                  <span class="wine-name">Lamadrid Gran Reserva Malbec</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Lamadrid Gran Reserva Malbec">Lamadrid Gran Reserva Malbec <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_5_std_notes">(Cuerpo robusto, taninos dulces y redondez sublime)</span>
                 </div>
                 <div class="pairing-row upgrade-pairing iconic-wine">
                   <span class="pairing-badge upgrade-badge icon-flag" data-i18n="badge_iconic">Ícono Upgrade:</span>
-                  <span class="wine-name">Matilde Malbec</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Matilde Malbec">Matilde Malbec <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_5_upg_notes">(El vino ícono de la bodega · Edición limitada de barricas de excepción)</span>
                 </div>
               </div>
@@ -796,12 +1036,12 @@
               <div class="dish-pairings">
                 <div class="pairing-row standard-pairing">
                   <span class="pairing-badge standard-badge" data-i18n="badge_pairing">Maridaje:</span>
-                  <span class="wine-name">ZunZun Pet Nat</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="ZunZun Pet Nat">ZunZun Pet Nat <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_7_std_notes">(Pétillant Naturel · Burbuja natural salvaje, fruta fresca y vivacidad)</span>
                 </div>
                 <div class="pairing-row upgrade-pairing">
                   <span class="pairing-badge upgrade-badge" data-i18n="badge_upgrade">Upgrade:</span>
-                  <span class="wine-name">Margarita Espumoso</span>
+                  <button type="button" class="wine-name wine-trigger" data-wine="Margarita Espumoso">Margarita Espumoso <span class="wine-info-icon">🍷</span></button>
                   <span class="wine-notes" data-i18n="wine_7_upg_notes">(Método tradicional champenoise · Elegancia fina y burbuja persistente)</span>
                 </div>
               </div>
@@ -821,15 +1061,15 @@
           <div class="card-footer-details">
             <div class="footer-col">
               <span class="col-title" data-i18n="col_reservations">RESERVAS & VISITAS</span>
-              <span class="col-content">+54 9 261 555-7890</span>
-              <span class="col-content">turismo@lamadridwines.com</span>
+              <a href="https://wa.me/5492615548460?text=Hola,%20quisiera%20hacer%20una%20reserva%20en%20Los%20Bocheros%20Rest%C3%B3" target="_blank" rel="noopener noreferrer" class="col-content col-link">+54 9 2615 54-8460</a>
+              <a href="mailto:turismo@lamadridwines.com" class="col-content col-link">turismo@lamadridwines.com</a>
             </div>
             <div class="footer-col brand-col">
               <img src="assets/lamadrid-logo.png" alt="Lamadrid Logo" class="footer-logo">
             </div>
             <div class="footer-col">
               <span class="col-title" data-i18n="col_location">UBICACIÓN</span>
-              <span class="col-content">Roque Sáenz Peña 8450</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Lamadrid+Estate+Wines+Roque+Saenz+Pena+8450+Las+Compuertas+Mendoza" target="_blank" rel="noopener noreferrer" class="col-content col-link">Roque Sáenz Peña 8450</a>
               <span class="col-content">Las Compuertas, Luján de Cuyo, Mendoza</span>
             </div>
           </div>
@@ -864,19 +1104,31 @@
       </div>
     </section>
 
-    <!-- Quick Action Contact & Booking Drawer -->
-    <section class="booking-cta-bar">
+    <!-- Quick Action Contact & Booking Section -->
+    <section class="booking-cta-bar" id="booking-section">
       <div class="cta-inner">
         <div class="cta-text">
+          <span class="cta-eyebrow" data-i18n="cta_eyebrow">ATENCIÓN PERSONALIZADA · TURISMO & RESTAURANTE</span>
           <h4 data-i18n="cta_title">¿Desea coordinar una reserva en Los Bocheros?</h4>
-          <p data-i18n="cta_desc">Almuerzos maridados de Miércoles a Domingos con reserva previa.</p>
+          <p data-i18n="cta_desc">Almuerzos maridados de Miércoles a Domingos (12:30 a 16:30 hs) con reserva previa.</p>
+          <div class="cta-contact-badges">
+            <a href="tel:+5492615548460" class="contact-pill">
+              <span>📞</span> <strong>+54 9 2615 54-8460</strong>
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lamadrid+Estate+Wines+Roque+Saenz+Pena+8450+Las+Compuertas+Mendoza" target="_blank" rel="noopener noreferrer" class="contact-pill">
+              <span>📍</span> <span>Roque Sáenz Peña 8450, Las Compuertas</span>
+            </a>
+          </div>
         </div>
         <div class="cta-buttons">
-          <a href="https://wa.me/5492615557890?text=Hola,%20quisiera%20consultar%20por%20una%20reserva%20para%20Los%20Bocheros" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <button type="button" id="open-booking-modal-btn" class="btn btn-whatsapp">
             <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.3C4.19 14.91 3.73 13.3 3.73 11.91C3.73 7.37 7.46 3.67 12.05 3.67M9.06 7.42C8.89 7.42 8.62 7.48 8.38 7.74C8.15 8 7.49 8.62 7.49 9.87C7.49 11.12 8.4 12.33 8.53 12.5C8.66 12.67 10.32 15.23 12.86 16.32C13.46 16.58 13.93 16.74 14.3 16.85C14.91 17.05 15.46 17.02 15.9 16.96C16.39 16.89 17.41 16.34 17.62 15.75C17.83 15.16 17.83 14.66 17.77 14.55C17.71 14.44 17.54 14.38 17.29 14.25C17.04 14.13 15.82 13.53 15.59 13.44C15.36 13.36 15.2 13.32 15.03 13.57C14.86 13.82 14.38 14.38 14.24 14.55C14.1 14.72 13.95 14.74 13.7 14.61C13.45 14.49 12.38 14.14 11.12 13.01C10.14 12.13 9.47 11.05 9.28 10.72C9.09 10.39 9.26 10.21 9.38 10.09C9.5 9.97 9.64 9.79 9.77 9.64C9.9 9.49 9.94 9.38 10.02 9.22C10.1 9.05 10.06 8.91 10 8.78C9.94 8.66 9.44 7.44 9.24 6.94C9.04 6.45 8.84 6.52 8.68 6.52L8.27 6.51C8.08 6.51 7.78 6.58 7.55 6.83"/>
             </svg>
-            <span data-i18n="btn_whatsapp">Consultar por WhatsApp</span>
+            <span data-i18n="btn_book_assistant">Armar Reserva por WhatsApp</span>
+          </button>
+          <a href="https://wa.me/5492615548460?text=Hola,%20quisiera%20consultar%20por%20una%20reserva%20para%20Los%20Bocheros%20Rest%C3%B3" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span data-i18n="btn_whatsapp_direct">Chat Directo (+54 9 2615 54-8460)</span>
           </a>
           <button id="scroll-to-menu-btn" class="btn btn-secondary">
             <span data-i18n="btn_view_menu">Ver Menú Completo</span>
@@ -886,10 +1138,144 @@
     </section>
   </main>
 
+  <!-- Floating Selection Summary Bar (Spring A La Carte Pre-Selection) -->
+  <div class="selection-floating-bar" id="selection-bar" style="display: none;" aria-live="polite">
+    <div class="selection-bar-inner">
+      <div class="selection-info">
+        <span class="selection-badge-count" id="selection-count">0</span>
+        <div class="selection-text">
+          <span class="selection-label" data-i18n="sel_bar_title">Mi Selección de Carta</span>
+          <span class="selection-total" id="selection-total">$0</span>
+        </div>
+      </div>
+      <div class="selection-actions">
+        <button type="button" class="sel-clear-btn" id="clear-selection-btn" data-i18n="sel_bar_clear">Limpiar</button>
+        <button type="button" class="sel-book-btn" id="book-with-selection-btn">
+          <span data-i18n="sel_bar_send">Reservar con esta selección</span> →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick-Reserve Button -->
+  <button type="button" class="floating-wa-btn" id="floating-reserve-btn" aria-label="Reservar por WhatsApp al +54 9 2615 54-8460" title="Reservar en Los Bocheros · +54 9 2615 54-8460">
+    <svg class="wa-fab-icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.3C4.19 14.91 3.73 13.3 3.73 11.91C3.73 7.37 7.46 3.67 12.05 3.67M9.06 7.42C8.89 7.42 8.62 7.48 8.38 7.74C8.15 8 7.49 8.62 7.49 9.87C7.49 11.12 8.4 12.33 8.53 12.5C8.66 12.67 10.32 15.23 12.86 16.32C13.46 16.58 13.93 16.74 14.3 16.85C14.91 17.05 15.46 17.02 15.9 16.96C16.39 16.89 17.41 16.34 17.62 15.75C17.83 15.16 17.83 14.66 17.77 14.55C17.71 14.44 17.54 14.38 17.29 14.25C17.04 14.13 15.82 13.53 15.59 13.44C15.36 13.36 15.2 13.32 15.03 13.57C14.86 13.82 14.38 14.38 14.24 14.55C14.1 14.72 13.95 14.74 13.7 14.61C13.45 14.49 12.38 14.14 11.12 13.01C10.14 12.13 9.47 11.05 9.28 10.72C9.09 10.39 9.26 10.21 9.38 10.09C9.5 9.97 9.64 9.79 9.77 9.64C9.9 9.49 9.94 9.38 10.02 9.22C10.1 9.05 10.06 8.91 10 8.78C9.94 8.66 9.44 7.44 9.24 6.94C9.04 6.45 8.84 6.52 8.68 6.52L8.27 6.51C8.08 6.51 7.78 6.58 7.55 6.83"/>
+    </svg>
+    <span class="wa-fab-label" data-i18n="fab_reserve">Reservar Mesa</span>
+  </button>
+
+  <!-- ===================================================================
+       MODAL 1: ASISTENTE INTERACTIVO DE RESERVAS (+54 9 2615 54-8460)
+       =================================================================== -->
+  <div class="modal-backdrop" id="booking-modal" aria-hidden="true" role="dialog" aria-labelledby="booking-modal-title">
+    <div class="modal-card booking-modal-card">
+      <button type="button" class="modal-close-btn" id="close-booking-modal" aria-label="Cerrar ventana">×</button>
+      
+      <div class="modal-header">
+        <span class="modal-eyebrow">LOS BOCHEROS RESTÓ · LAMADRID ESTATE WINES</span>
+        <h3 class="modal-title" id="booking-modal-title" data-i18n="modal_book_title">Reservar Experiencia Enogastronómica</h3>
+        <p class="modal-subtitle" data-i18n="modal_book_subtitle">Complete los detalles de su visita para enviar su solicitud directa por WhatsApp a nuestro equipo de Hospitalidad (+54 9 2615 54-8460).</p>
+      </div>
+
+      <form id="booking-form" class="booking-form">
+        <div class="form-row two-cols">
+          <div class="form-group">
+            <label for="book-name" data-i18n="form_name_label">Nombre y Apellido</label>
+            <input type="text" id="book-name" placeholder="Ej. Martín Gómez" required>
+          </div>
+          <div class="form-group">
+            <label for="book-guests" data-i18n="form_guests_label">Comensales</label>
+            <select id="book-guests">
+              <option value="1">1 persona</option>
+              <option value="2" selected>2 personas</option>
+              <option value="3">3 personas</option>
+              <option value="4">4 personas</option>
+              <option value="5">5 personas</option>
+              <option value="6">6 personas</option>
+              <option value="7">7 personas</option>
+              <option value="8">8 personas</option>
+              <option value="9+">Grupo (9 o más personas)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row two-cols">
+          <div class="form-group">
+            <label for="book-date" data-i18n="form_date_label">Fecha de Visita (Mié a Dom)</label>
+            <input type="date" id="book-date" required>
+          </div>
+          <div class="form-group">
+            <label for="book-time" data-i18n="form_time_label">Horario Preferido</label>
+            <select id="book-time">
+              <option value="12:30 hs">12:30 hs</option>
+              <option value="13:00 hs" selected>13:00 hs</option>
+              <option value="13:30 hs">13:30 hs</option>
+              <option value="14:00 hs">14:00 hs</option>
+              <option value="14:30 hs">14:30 hs</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row two-cols">
+          <div class="form-group">
+            <label for="book-experience" data-i18n="form_exp_label">Propuesta Gastronómica</label>
+            <select id="book-experience">
+              <option value="Menú Primavera (A la Carta)">🌸 Menú Primavera (A la Carta)</option>
+              <option value="Menú Otoño (Degustación 7 Pasos)">🍂 Menú Otoño (7 Pasos)</option>
+              <option value="Visita Guiada + Degustación + Almuerzo">🍷 Visita Bodega + Almuerzo</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="book-pairing" data-i18n="form_pairing_label">Preferencia de Maridaje</label>
+            <select id="book-pairing">
+              <option value="Maridaje Clásico (Reserva / Terroir)">Maridaje Clásico (Reserva)</option>
+              <option value="Maridaje Upgrade (Gran Reserva & Íconos)">Maridaje Upgrade (Gran Reserva & Íconos)</option>
+              <option value="A definir en la mesa">A definir en la mesa</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="book-notes" data-i18n="form_notes_label">Restricciones Alimentarias u Ocasión Especial (Opcional)</label>
+          <input type="text" id="book-notes" placeholder="Ej. 1 opción vegetariana, sin TACC, aniversario...">
+        </div>
+
+        <div class="form-preselection-box" id="modal-preselection-box" style="display: none;">
+          <div class="preselection-header">
+            <span data-i18n="form_preselected_dishes">Platos preseleccionados de la carta:</span>
+          </div>
+          <ul class="preselection-list" id="modal-preselection-list"></ul>
+        </div>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn btn-whatsapp btn-full">
+            <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2"/>
+            </svg>
+            <span data-i18n="form_submit_wa">Enviar Reserva por WhatsApp (+54 9 2615 54-8460)</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL 2: FICHA TÉCNICA & NOTAS DEL SOMMELIER (CAVA LAMADRID)
+       =================================================================== -->
+  <div class="modal-backdrop" id="wine-modal" aria-hidden="true" role="dialog" aria-labelledby="wine-modal-title">
+    <div class="modal-card wine-modal-card">
+      <button type="button" class="modal-close-btn" id="close-wine-modal" aria-label="Cerrar ficha de vino">×</button>
+      <div class="wine-modal-content" id="wine-modal-body">
+        <!-- Populated dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
   <!-- Global Footer -->
   <footer class="site-footer">
     <div class="footer-bottom">
-      <p>© 2026 Lamadrid Estate Wines. Restaurante Los Bocheros. Las Compuertas, Luján de Cuyo, Mendoza, Argentina. Todos los derechos reservados.</p>
+      <p>© 2026 Lamadrid Estate Wines · Restaurante Los Bocheros · Roque Sáenz Peña 8450, Las Compuertas, Luján de Cuyo, Mendoza, Argentina · Reservas: <a href="https://wa.me/5492615548460" target="_blank" rel="noopener noreferrer" class="footer-inline-link">+54 9 2615 54-8460</a></p>
       <p class="drink-aware">Beber con moderación. Prohibida su venta a menores de 18 años.</p>
     </div>
   </footer>

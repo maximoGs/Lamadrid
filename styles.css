@@ -95,13 +95,13 @@ body {
 }
 
 .nav-container {
-  max-width: 1250px;
+  max-width: 1280px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.85rem;
+  gap: 0.75rem;
 }
 
 .nav-brand {
@@ -169,7 +169,7 @@ body {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
 }
 
@@ -339,6 +339,20 @@ body {
   background: #ffffff;
 }
 
+.nav-reserve-cta {
+  background: var(--terracotta-wine);
+  border-color: var(--terracotta-wine);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(110, 34, 50, 0.25);
+}
+
+.nav-reserve-cta:hover {
+  background: var(--malbec-deep);
+  border-color: var(--malbec-deep);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .nav-icon {
   width: 14px;
   height: 14px;
@@ -349,7 +363,7 @@ body {
    ========================================================================== */
 .hero-banner {
   position: relative;
-  min-height: 520px;
+  min-height: 530px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -600,24 +614,58 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-/* Review Invite Pill */
-.review-invite-banner {
-  margin-top: 0.25rem;
+/* Hero Quick Links (Reserve + Review) */
+.hero-quick-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.35rem;
+}
+
+.hero-reserve-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #25d366;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.42rem 1.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+  transition: var(--transition-smooth);
+}
+
+.hero-reserve-chip:hover {
+  background: #1fb858;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.wa-mini-icon {
+  width: 15px;
+  height: 15px;
 }
 
 .review-link-chip {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(13, 38, 68, 0.65);
-  border: 1px solid rgba(207, 168, 110, 0.4);
+  background: rgba(13, 38, 68, 0.68);
+  border: 1px solid rgba(207, 168, 110, 0.45);
   color: #ffffff;
   text-decoration: none;
   font-family: var(--font-sans);
   font-size: 0.73rem;
   font-weight: 600;
   letter-spacing: 0.08em;
-  padding: 0.35rem 1rem;
+  padding: 0.4rem 1rem;
   border-radius: 20px;
   backdrop-filter: blur(6px);
   transition: var(--transition-smooth);
@@ -661,7 +709,7 @@ body {
   padding: 1.25rem 2rem;
   text-align: center;
   box-shadow: var(--shadow-card);
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   position: relative;
 }
 
@@ -687,7 +735,7 @@ body {
   letter-spacing: 0.12em;
   color: var(--lamadrid-navy-primary);
   text-transform: uppercase;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .pin-icon {
@@ -702,14 +750,114 @@ body {
   font-style: italic;
   font-weight: 600;
   color: var(--terracotta-wine);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 
 .vegetarian-note {
+  display: block;
   font-family: var(--font-sans);
   font-size: 0.73rem;
   letter-spacing: 0.04em;
   color: var(--text-muted);
+  margin-bottom: 0.65rem;
+}
+
+.sommelier-hint-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--lamadrid-navy-soft);
+  color: var(--lamadrid-navy-primary);
+  font-family: var(--font-sans);
+  font-size: 0.71rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid rgba(21, 59, 102, 0.12);
+}
+
+/* ==========================================================================
+   Spring Toolbar: Quick Category Jumps & Dietary Filter
+   ========================================================================== */
+.spring-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--color-paper-border);
+  border-radius: 40px;
+  padding: 0.5rem 0.85rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.category-jump-pills,
+.dietary-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cat-jump-pill {
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--lamadrid-navy-primary);
+  background: var(--color-paper-light);
+  border: 1px solid var(--color-paper-border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
+}
+
+.cat-jump-pill:hover {
+  background: var(--lamadrid-navy-primary);
+  color: #ffffff;
+  border-color: var(--lamadrid-navy-primary);
+}
+
+.pill-count {
+  background: rgba(21, 59, 102, 0.1);
+  color: inherit;
+  font-size: 0.64rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 10px;
+}
+
+.cat-jump-pill:hover .pill-count {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.diet-pill {
+  background: transparent;
+  border: 1px solid transparent;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.32rem 0.7rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.diet-pill:hover {
+  color: var(--terracotta-wine);
+  background: var(--color-paper-light);
+}
+
+.diet-pill.active {
+  background: var(--terracotta-wine);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(110, 34, 50, 0.2);
 }
 
 /* ==========================================================================
@@ -869,6 +1017,10 @@ body {
 }
 
 /* Category Headers (Entradas, Principales, Postres) */
+.menu-category-group {
+  scroll-margin-top: 85px;
+}
+
 .category-header {
   display: flex;
   align-items: center;
@@ -910,17 +1062,33 @@ body {
 }
 
 .course-item:hover {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.75);
   box-shadow: 0 4px 15px rgba(21, 59, 102, 0.04);
 }
 
-/* Title row with price */
+.course-item.dish-selected {
+  background: rgba(234, 241, 248, 0.55);
+  border: 1px solid rgba(21, 59, 102, 0.2);
+}
+
+.course-item.hidden-by-diet {
+  display: none;
+}
+
+/* Title row with price & selection button */
 .dish-title-row {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 1.5rem;
-  margin-bottom: 0.4rem;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 0.45rem;
+}
+
+.dish-price-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
 }
 
 .dish-price {
@@ -930,6 +1098,59 @@ body {
   color: var(--terracotta-wine);
   white-space: nowrap;
   letter-spacing: 0.04em;
+}
+
+.add-selection-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #ffffff;
+  border: 1px solid var(--color-paper-border);
+  color: var(--lamadrid-navy-primary);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.28rem 0.65rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.add-selection-btn:hover {
+  border-color: var(--lamadrid-navy-primary);
+  background: var(--lamadrid-navy-soft);
+}
+
+.add-selection-btn.selected {
+  background: var(--lamadrid-navy-primary);
+  border-color: var(--lamadrid-navy-primary);
+  color: #ffffff;
+}
+
+/* Dietary & Style Badges */
+.diet-badge {
+  font-family: var(--font-sans);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.14rem 0.5rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+}
+
+.veg-badge {
+  background: var(--olive-soft);
+  color: var(--olive-leaf);
+  border: 1px solid rgba(82, 99, 79, 0.2);
+}
+
+.fire-badge {
+  background: #fdf2ec;
+  color: #9e3d1c;
+  border: 1px solid rgba(158, 61, 28, 0.2);
 }
 
 .course-step-tag {
@@ -997,15 +1218,15 @@ body {
 .title-with-badge {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 
 .dish-title {
   font-family: var(--font-serif-display);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: var(--lamadrid-navy-dark);
   text-transform: uppercase;
   line-height: 1.35;
@@ -1021,10 +1242,10 @@ body {
 
 .dish-description {
   font-family: var(--font-serif-body);
-  font-size: 1.08rem;
+  font-size: 1.06rem;
   color: var(--text-secondary);
-  line-height: 1.55;
-  margin-bottom: 0.85rem;
+  line-height: 1.52;
+  margin-bottom: 0.75rem;
 }
 
 /* Dish Pairings */
@@ -1081,6 +1302,38 @@ body {
   color: var(--text-primary);
 }
 
+.wine-trigger {
+  background: none;
+  border: none;
+  padding: 0.05rem 0.35rem;
+  margin-left: -0.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: left;
+  transition: var(--transition-smooth);
+  border-bottom: 1px dotted rgba(185, 152, 99, 0.6);
+}
+
+.wine-trigger:hover {
+  background: rgba(207, 168, 110, 0.15);
+  color: var(--terracotta-wine) !important;
+  border-bottom-color: var(--terracotta-wine);
+}
+
+.wine-info-icon {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+.wine-trigger:hover .wine-info-icon {
+  transform: scale(1.18) rotate(-8deg);
+  opacity: 1;
+}
+
 .upgrade-pairing .wine-name {
   color: var(--lamadrid-navy-dark);
 }
@@ -1121,6 +1374,10 @@ body[data-active-filter="upgrade"] .standard-pairing {
   opacity: 0.6;
   font-size: 0.75rem;
   line-height: 1;
+}
+
+.course-divider.hidden-by-diet {
+  display: none;
 }
 
 .course-divider .diamond {
@@ -1195,6 +1452,17 @@ body[data-active-filter="upgrade"] .standard-pairing {
   color: var(--text-secondary);
 }
 
+.col-link {
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.col-link:hover {
+  color: var(--terracotta-wine);
+  text-decoration: underline;
+}
+
 .brand-col {
   text-align: center;
 }
@@ -1260,6 +1528,22 @@ body[data-active-filter="upgrade"] .standard-pairing {
   padding: 2.5rem;
   margin-bottom: 2rem;
   position: relative;
+  overflow: hidden;
+}
+
+.step-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-paper-dark);
+}
+
+.step-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--lamadrid-navy-primary), var(--terracotta-wine));
+  transition: width 0.35s ease;
 }
 
 .step-nav-header {
@@ -1314,6 +1598,13 @@ body[data-active-filter="upgrade"] .standard-pairing {
   margin-top: 2rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-paper-border);
+}
+
+.step-keyboard-hint {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
 }
 
 .step-nav-btn {
@@ -1401,9 +1692,10 @@ body[data-active-filter="upgrade"] .standard-pairing {
   background: linear-gradient(135deg, var(--lamadrid-navy-dark) 0%, var(--lamadrid-navy-primary) 100%);
   color: #ffffff;
   border-radius: var(--border-radius-md);
-  padding: 2.2rem 2.5rem;
+  padding: 2.4rem 2.5rem;
   margin-top: 2rem;
   box-shadow: var(--shadow-card);
+  border: 1px solid rgba(207, 168, 110, 0.35);
 }
 
 .cta-inner {
@@ -1414,9 +1706,19 @@ body[data-active-filter="upgrade"] .standard-pairing {
   flex-wrap: wrap;
 }
 
+.cta-eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gold-accent);
+  margin-bottom: 0.35rem;
+}
+
 .cta-text h4 {
   font-family: var(--font-serif-display);
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   margin-bottom: 0.35rem;
@@ -1425,18 +1727,46 @@ body[data-active-filter="upgrade"] .standard-pairing {
 .cta-text p {
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  opacity: 0.85;
+  opacity: 0.88;
+  margin-bottom: 0.85rem;
+}
+
+.cta-contact-badges {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  transition: var(--transition-smooth);
+}
+
+.contact-pill:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--gold-accent);
 }
 
 .cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: 0.85rem;
   flex-wrap: wrap;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.4rem;
   border-radius: 30px;
@@ -1447,6 +1777,12 @@ body[data-active-filter="upgrade"] .standard-pairing {
   text-decoration: none;
   cursor: pointer;
   transition: var(--transition-smooth);
+}
+
+.btn-full {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.85rem;
 }
 
 .btn-whatsapp {
@@ -1480,13 +1816,396 @@ body[data-active-filter="upgrade"] .standard-pairing {
 }
 
 /* ==========================================================================
+   Floating Selection Bar & Floating WhatsApp Action Button
+   ========================================================================== */
+.selection-floating-bar {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 120;
+  width: calc(100% - 2rem);
+  max-width: 720px;
+  background: var(--lamadrid-navy-dark);
+  color: #ffffff;
+  border: 1px solid var(--gold-bronze);
+  border-radius: 40px;
+  padding: 0.65rem 1.25rem;
+  box-shadow: 0 12px 35px rgba(13, 38, 68, 0.4);
+  animation: fadeInDown 0.25s ease-out;
+}
+
+.selection-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.selection-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.selection-badge-count {
+  background: var(--gold-bronze);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selection-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.selection-label {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.selection-total {
+  font-family: var(--font-serif-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.selection-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sel-clear-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.sel-clear-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sel-book-btn {
+  background: #25d366;
+  border: none;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.48rem 1.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.sel-book-btn:hover {
+  background: #1fb858;
+}
+
+/* Floating WhatsApp FAB */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 110;
+  background: #25d366;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 40px;
+  padding: 0.7rem 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  transition: var(--transition-smooth);
+}
+
+.floating-wa-btn:hover {
+  background: #1fb858;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.55);
+}
+
+.wa-fab-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ==========================================================================
+   Modals (Reservation Assistant & Sommelier Wine Sheet)
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(13, 38, 68, 0.68);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  overflow-y: auto;
+}
+
+.modal-backdrop.open {
+  display: flex;
+  animation: fadeInDown 0.25s ease-out;
+}
+
+.modal-card {
+  background: var(--color-paper-card);
+  border: 1px solid var(--gold-bronze);
+  border-radius: var(--border-radius-md);
+  max-width: 580px;
+  width: 100%;
+  padding: 2.2rem 2rem;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--color-paper-border);
+  background: #ffffff;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.modal-close-btn:hover {
+  background: var(--terracotta-wine);
+  color: #ffffff;
+  border-color: var(--terracotta-wine);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-paper-border);
+}
+
+.modal-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gold-bronze);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.modal-title {
+  font-family: var(--font-serif-display);
+  font-size: 1.5rem;
+  color: var(--lamadrid-navy-dark);
+  margin-bottom: 0.4rem;
+}
+
+.modal-subtitle {
+  font-family: var(--font-serif-body);
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Booking Form */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--lamadrid-navy-primary);
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-paper-border);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--lamadrid-navy-primary);
+  box-shadow: 0 0 0 3px rgba(21, 59, 102, 0.1);
+}
+
+.form-preselection-box {
+  background: var(--lamadrid-navy-soft);
+  border: 1px solid rgba(21, 59, 102, 0.2);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.preselection-header {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--lamadrid-navy-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.preselection-list {
+  list-style: none;
+  font-family: var(--font-serif-body);
+  font-size: 0.98rem;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* Sommelier Wine Sheet Modal */
+.wine-modal-card {
+  max-width: 520px;
+}
+
+.wine-sheet-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: var(--wine-soft);
+  color: var(--terracotta-wine);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.wine-sheet-title {
+  font-family: var(--font-serif-display);
+  font-size: 1.6rem;
+  color: var(--lamadrid-navy-dark);
+  margin-bottom: 0.25rem;
+}
+
+.wine-sheet-origin {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--gold-bronze);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.wine-sheet-notes {
+  font-family: var(--font-serif-body);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-primary);
+  background: #ffffff;
+  border-left: 3px solid var(--terracotta-wine);
+  padding: 0.9rem 1.1rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 1.25rem;
+}
+
+.wine-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.wine-spec-box {
+  background: #ffffff;
+  border: 1px solid var(--color-paper-border);
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+}
+
+.spec-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.spec-value {
+  font-family: var(--font-serif-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lamadrid-navy-primary);
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer {
   margin-top: auto;
   background: #f2ece1;
   border-top: 1px solid var(--color-paper-border);
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 1.5rem 5rem;
   text-align: center;
 }
 
@@ -1499,6 +2218,16 @@ body[data-active-filter="upgrade"] .standard-pairing {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.footer-inline-link {
+  color: var(--lamadrid-navy-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-inline-link:hover {
+  text-decoration: underline;
 }
 
 .drink-aware {
@@ -1556,17 +2285,24 @@ body[data-active-filter="upgrade"] .standard-pairing {
     letter-spacing: 0.15em;
   }
 
+  .spring-toolbar {
+    border-radius: 14px;
+    justify-content: center;
+  }
+
   .menu-parchment-sheet {
     padding: 2.2rem 1.25rem 2rem;
   }
 
   .course-item {
     padding: 1rem 0.5rem;
+    flex-direction: column;
+    gap: 0.6rem;
   }
 
   .dish-title-row {
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.45rem;
   }
 
   .dish-price {
@@ -1588,8 +2324,22 @@ body[data-active-filter="upgrade"] .standard-pairing {
     text-align: center;
   }
 
+  .cta-contact-badges,
   .cta-buttons {
     justify-content: center;
+  }
+
+  .form-row.two-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .wa-fab-label {
+    display: none;
+  }
+
+  .floating-wa-btn {
+    padding: 0.85rem;
+    border-radius: 50%;
   }
 }
 
@@ -1605,10 +2355,17 @@ body[data-active-filter="upgrade"] .standard-pairing {
   .top-nav,
   .hero-banner,
   .view-mode-bar,
+  .spring-toolbar,
+  .sommelier-hint-pill,
+  .add-selection-btn,
+  .wine-info-icon,
   .terroir-story-section,
   .booking-cta-bar,
+  .selection-floating-bar,
+  .floating-wa-btn,
+  .modal-backdrop,
   .site-footer,
-  .review-invite-banner {
+  .hero-quick-links {
     display: none !important;
   }
 
@@ -1631,10 +2388,12 @@ body[data-active-filter="upgrade"] .standard-pairing {
   .course-item {
     page-break-inside: avoid;
     padding: 0.6rem 0 !important;
+    display: flex !important;
   }
 
   .course-divider {
     margin: 0.3rem 0 !important;
+    display: block !important;
   }
 
   .card-heading-title {
