@@ -17,7 +17,7 @@ Diseñado bajo una estética **fina, argentina, suave y delicadamente rústica**
 ## 🍇 Características del Menú
 
 - **Diseño Rústico & Fino**: Paleta de tonos papel pergamino, oro viejo, azul emblemático de Lamadrid y acentos terruño/vino.
-- **Identidad de Marca**: Integración del imagotipo oficial de *Lamadrid Estate Wines* con marco refinado y sello **Best Of Wine Tourism by Great Wine Capitals (The Award of Excellence)**.
+- **Identidad de Marca & Distinciones**: Integración del imagotipo oficial de *Lamadrid Estate Wines*, sello **Recomendado Guía MICHELIN 2026 (Argentina)** y galardón **Best Of Wine Tourism by Great Wine Capitals (The Award of Excellence)**.
 - **Doble Propuesta Estacional**:
   - 🌸 **Menú Primavera (A la Carta)**:
     - **Entradas**: Espárragos a la plancha, Provoleta asada, Solomillo curado al Malbec, Queso de cabra con remolacha, Especial Dúo Empanadas Los Bocheros.
